@@ -2,7 +2,7 @@
 //  StudentMyAttendanceViewController.swift
 //  QR Attendance
 //
-//  Created by Ram Sri Charan on 4/28/18.
+//  on 4/28/18.
 //  
 //
 

@@ -2,7 +2,7 @@
 //  DisplayQRCodeViewController.swift
 //  QR Attendance
 //
-//  Created by Ram Sri Charan on 4/27/18.
+//  on 4/27/18.
 //  
 //
 

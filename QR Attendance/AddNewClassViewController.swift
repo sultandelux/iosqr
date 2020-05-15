@@ -2,7 +2,7 @@
 //  AddNewClassViewController.swift
 //  QR Attendance
 //
-//  Created by Ram Sri Charan on 4/21/18.
+//  on 4/21/18.
 //  
 //
 

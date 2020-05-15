@@ -2,7 +2,7 @@
 //  ColorsExtensions.swift
 //  QR Attendance
 //
-//  Created by Ram Sri Charan on 4/29/18.
+//  on 4/29/18.
 //  
 //
 

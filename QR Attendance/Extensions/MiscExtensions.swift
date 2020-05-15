@@ -2,7 +2,7 @@
 //  MiscExtensions.swift
 //  QR Attendance
 //
-//  Created by Ram Sri Charan on 4/25/18.
+//  on 4/25/18.
 //  
 //
 

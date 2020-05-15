@@ -2,7 +2,7 @@
 //  TutorProfileViewController.swift
 //  QR Attendance
 //
-//  Created by Ram Sri Charan on 4/22/18.
+// 
 //  
 //
 
