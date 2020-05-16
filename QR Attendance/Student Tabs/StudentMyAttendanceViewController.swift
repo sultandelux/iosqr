@@ -12,7 +12,7 @@ import Firebase
 class StudentMyAttendanceViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
 
     var CurrentDetails : UIViewController.BasicDetails?
-    var ViewTitle : String = "My Attendance"
+    var ViewTitle : String = "Менің қатысуларым"
     var isTutor : Bool = false
     
     var timer = Timer()
@@ -131,15 +131,15 @@ class StudentMyAttendanceViewController: UIViewController, UITableViewDelegate, 
         if (totalClasses > 0){
             attendancePercentage = ( Double (totalPresent) / Double (totalClasses) ) * 100
         }
-        print("Total Classes: \(totalClasses) \nTotal Attended: \(totalPresent) \nAverage: \(attendancePercentage)")
+        print("Жалпы курстар: \(totalClasses) \nTotal Attended: \(totalPresent) \nAverage: \(attendancePercentage)")
         
         self.percentageValue = attendancePercentage
         self.percentageCounter = 0.00
         animatePercentage(percentage: attendancePercentage)
         
-        totalClassesLabel.text = "Total Classes : \(totalClasses)"
-        totalAttendedLabel.text = "Total Attended : \(totalPresent)"
-        totalUnAttendedLabel.text = "Total UnAttended : \(totalClasses - totalPresent)"
+        totalClassesLabel.text = "Жалпы курстар : \(totalClasses)"
+        totalAttendedLabel.text = "Жалпы Қатысулар : \(totalPresent)"
+        totalUnAttendedLabel.text = "Жалпы Қалдырулар : \(totalClasses - totalPresent)"
         
         attendanceList = attendanceList.sorted(by: {
             $0.date?.compare($1.date!) == .orderedDescending
@@ -457,7 +457,7 @@ class StudentMyAttendanceViewController: UIViewController, UITableViewDelegate, 
         label.translatesAutoresizingMaskIntoConstraints = false
         label.adjustsFontSizeToFitWidth = true
         label.font = UIFont.boldSystemFont(ofSize: 30)
-        label.text = "Class Schedule"
+        label.text = "Курс кестесі"
         label.textAlignment = .center
         return label
     }()

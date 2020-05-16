@@ -58,7 +58,7 @@ class MyClassesTableViewController: UICollectionViewController, UICollectionView
 
 
             // Navigation bar setup
-            self.navigationItem.title = "My Classes"
+            self.navigationItem.title = "Менің курстарым"
             
             self.navigationController?.navigationBar.tintColor = UIColor.white
             self.navigationController?.navigationBar.barStyle = UIBarStyle.blackTranslucent
@@ -157,13 +157,13 @@ class MyClassesTableViewController: UICollectionViewController, UICollectionView
     // For students to add new class using id
     func addClassUsingIdForStudents(){
         // Create the alert controller.
-        let alert = UIAlertController(title: "Add New Class", message: "Please provide a valid code provided by your tutor of the class you wish to enroll.", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Жаңа курсты қосу", message: "Жазылғыңыз келген курстың жарамды кодын мұғалімнен алып толтырыңыз", preferredStyle: .alert)
         // Add the text field. You can configure it however you need.
         alert.addTextField(configurationHandler: { (textField) -> Void in
-            textField.placeholder = "Class Code"
+            textField.placeholder = "Курс коды"
         })
         // Grab the value from the text field, and print it when the user clicks OK.
-        alert.addAction(UIAlertAction(title: "Add", style: .default, handler: { [weak alert] (action) -> Void in
+        alert.addAction(UIAlertAction(title: "Қосу", style: .default, handler: { [weak alert] (action) -> Void in
             let textField = (alert?.textFields![0])! as UITextField
             let givenClassId = textField.text
             if !(givenClassId?.isEmpty)!{

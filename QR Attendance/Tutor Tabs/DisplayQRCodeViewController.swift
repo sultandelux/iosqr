@@ -64,7 +64,7 @@ class DisplayQRCodeViewController: UIViewController {
     let tabHeadingLabel : UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = true
-        label.text = "Current Lectures QR Code"
+        label.text = "Қазіргі дәрістің QR-коды"
         label.adjustsFontSizeToFitWidth = true
         label.font = UIFont.boldSystemFont(ofSize: 30)
         label.textAlignment = .center
@@ -95,7 +95,7 @@ class DisplayQRCodeViewController: UIViewController {
     let qrCodeLinkHeadingLabel : UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "You can also use the following link to display the QR Code in web browser"
+        label.text = "Бұл QR кодты браузерде төменгі сілтеме бойынша көрсете аласыз"
         label.adjustsFontSizeToFitWidth = true
         label.font = UIFont.boldSystemFont(ofSize: 18)
         label.numberOfLines = 2

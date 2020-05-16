@@ -77,14 +77,14 @@ class BaseTabBarViewController: UITabBarController, UITabBarControllerDelegate {
         // Class Home viewController
         classHomeViewController.CurrentDetails = CurrentDetails
         let classHomeTab = UINavigationController(rootViewController: classHomeViewController)
-        classHomeTab.tabBarItem.title = "Home"
+        classHomeTab.tabBarItem.title = "Басты бет"
         classHomeTab.tabBarItem.image = #imageLiteral(resourceName: "home_icon")
         
         
         // QR Code viewController
         QRCodeViewController.CurrentDetails = CurrentDetails
         let qrCodeTab = UINavigationController(rootViewController: QRCodeViewController)
-        qrCodeTab.tabBarItem.title = "Generate QR"
+        qrCodeTab.tabBarItem.title = "QR-код жасау"
         qrCodeTab.tabBarItem.image = #imageLiteral(resourceName: "generateQR_icon")
         
         
@@ -92,7 +92,7 @@ class BaseTabBarViewController: UITabBarController, UITabBarControllerDelegate {
         // My Students viewController
         MyStudentViewController.CurrentDetails = CurrentDetails
         let myStudentTab = UINavigationController(rootViewController: MyStudentViewController)
-        myStudentTab.tabBarItem.title = "My Students"
+        myStudentTab.tabBarItem.title = "Менің Студенттерім"
         myStudentTab.tabBarItem.image = #imageLiteral(resourceName: "users_icon")
         
         
@@ -100,7 +100,7 @@ class BaseTabBarViewController: UITabBarController, UITabBarControllerDelegate {
         // My profile viewController
         ProfileViewController.CurrentDetails = CurrentDetails
         let profileTab = UINavigationController(rootViewController: ProfileViewController)
-        profileTab.tabBarItem.title = "My Profile"
+        profileTab.tabBarItem.title = "Менің профилім"
         profileTab.tabBarItem.image = #imageLiteral(resourceName: "profile_icon")
         
         
@@ -114,22 +114,22 @@ class BaseTabBarViewController: UITabBarController, UITabBarControllerDelegate {
         let qrScannerViewController : StudentQRScannerViewController = StudentQRScannerViewController()
         qrScannerViewController.CurrentDetails = CurrentDetails
         let qrScannerTab = UINavigationController(rootViewController: qrScannerViewController)
-        qrScannerTab.tabBarItem.title = "Scan QR"
+        qrScannerTab.tabBarItem.title = "QR сканы"
         qrScannerTab.tabBarItem.image = #imageLiteral(resourceName: "scanQR_icon")
         
         // My Attendance tab
         let myAttendanceViewController : StudentMyAttendanceViewController = StudentMyAttendanceViewController()
         myAttendanceViewController.CurrentDetails = CurrentDetails
-        myAttendanceViewController.ViewTitle = "My Attendance"
+        myAttendanceViewController.ViewTitle = "Менің қатысуларым"
         
         let myAttendanceTab = UINavigationController(rootViewController: myAttendanceViewController)
-        myAttendanceTab.tabBarItem.title = "My Attendance"
+        myAttendanceTab.tabBarItem.title = "Менің қатысуларым"
         myAttendanceTab.tabBarItem.image = #imageLiteral(resourceName: "attendance_icon")
         
         // My profile viewController
         ProfileViewController.CurrentDetails = CurrentDetails
         let profileTab = UINavigationController(rootViewController: ProfileViewController)
-        profileTab.tabBarItem.title = "My Profile"
+        profileTab.tabBarItem.title = "Менің профилім"
         profileTab.tabBarItem.image = #imageLiteral(resourceName: "profile_icon")
         
          viewControllers = [myAttendanceTab, qrScannerTab, profileTab]

@@ -21,7 +21,7 @@ class AddNewClassViewController: UIViewController, UIImagePickerControllerDelega
         self.avoidKeyboardObstruction()
         view.backgroundColor = UIColor.black
         
-        self.navigationItem.title = "Create Class"
+        self.navigationItem.title = "Жаңа курсты еңгізіу"
 
         setupViews()
     }
@@ -237,7 +237,7 @@ class AddNewClassViewController: UIViewController, UIImagePickerControllerDelega
     }()
     
     //textFields and their views
-    // Class Name textfield
+    // Курс аты textfield
     
     // baseView for text fields
     var classNameView : UIView = {
@@ -261,7 +261,7 @@ class AddNewClassViewController: UIViewController, UIImagePickerControllerDelega
         let classNameLabel : UILabel = {
             let label = UILabel()
             label.translatesAutoresizingMaskIntoConstraints = false
-            label.text = "Class Name: *"
+            label.text = "Курс аты: *"
             label.font = UIFont.boldSystemFont(ofSize: 10)
             return label
         }()
@@ -293,11 +293,11 @@ class AddNewClassViewController: UIViewController, UIImagePickerControllerDelega
             return v
         }()
     
-        // Lecture Count label
+        // Дәріс саны label
         let lecturesCountLabel : UILabel = {
             let label = UILabel()
             label.translatesAutoresizingMaskIntoConstraints = false
-            label.text = "Lectures Count: *"
+            label.text = "Дәріс саны: *"
             label.font = UIFont.boldSystemFont(ofSize: 10)
             return label
         }()
@@ -330,11 +330,11 @@ class AddNewClassViewController: UIViewController, UIImagePickerControllerDelega
             return v
         }()
     
-        // Class Location label
+        // Дәріс локациясы label
         let classLocationLabel : UILabel = {
             let label = UILabel()
             label.translatesAutoresizingMaskIntoConstraints = false
-            label.text = "Class Location:"
+            label.text = "Дәріс локациясы:"
             label.font = UIFont.boldSystemFont(ofSize: 10)
             return label
         }()
@@ -351,7 +351,7 @@ class AddNewClassViewController: UIViewController, UIImagePickerControllerDelega
     var createClassButton : UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Create Class", for: .normal)
+        button.setTitle("Жаңа курсты еңгізіу", for: .normal)
         button.addTarget(self, action: #selector(handleCreateClass), for: .touchUpInside)
         
         button.layer.cornerRadius = 20

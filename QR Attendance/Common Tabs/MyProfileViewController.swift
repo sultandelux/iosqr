@@ -42,7 +42,7 @@ class MyProfileViewController: UIViewController, UIImagePickerControllerDelegate
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        self.tabBarController?.title = "My Profile"
+        self.tabBarController?.title = "Менің профилім"
         self.tabBarController?.navigationItem.rightBarButtonItem = nil
         self.tabBarController?.navigationItem.searchController = nil
     }
@@ -354,7 +354,7 @@ class MyProfileViewController: UIViewController, UIImagePickerControllerDelegate
     var schoolNameText : UITextField = {
         let view = UITextField()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.placeholder = "School Name"
+        view.placeholder = "ЖОО аты"
         view.adjustsFontSizeToFitWidth = true
 //        view.font = UIFont.systemFont(ofSize: 18)
         return view
@@ -372,7 +372,7 @@ class MyProfileViewController: UIViewController, UIImagePickerControllerDelegate
     var phoneNumberText : UITextField = {
         let view = UITextField()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.placeholder = "Phone Number"
+        view.placeholder = "Телефон нөмері"
         view.keyboardType = .numberPad
         view.adjustsFontSizeToFitWidth = true
 //        view.font = UIFont.systemFont(ofSize: 18)
@@ -388,11 +388,11 @@ class MyProfileViewController: UIViewController, UIImagePickerControllerDelegate
     
     
     
-    // About me text view
+    // Био text view
     var aboutMeText : UITextField = {
         let view = UITextField()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.placeholder = "About me"
+        view.placeholder = "Био"
         view.adjustsFontSizeToFitWidth = true
 //        view.font = UIFont.systemFont(ofSize: 18)
         return view
@@ -411,7 +411,7 @@ class MyProfileViewController: UIViewController, UIImagePickerControllerDelegate
     let saveButton : UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Save", for: UIControlState.normal)
+        button.setTitle("Сақтау", for: UIControlState.normal)
         button.addTarget(self, action: #selector(handleSave), for: .touchUpInside)
         
         button.layer.cornerRadius = 20
@@ -429,7 +429,7 @@ class MyProfileViewController: UIViewController, UIImagePickerControllerDelegate
     let logoutButton : UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Logout", for: UIControlState.normal)
+        button.setTitle("Шығу", for: UIControlState.normal)
         button.addTarget(self, action: #selector(handleLogout), for: .touchUpInside)
         
         button.layer.cornerRadius = 20

@@ -192,7 +192,7 @@ class RegistrationViewController: UIViewController {
     var userIdText : UITextField = {
         let view = UITextField()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.placeholder = "Username"
+        view.placeholder = "Аты"
         view.adjustsFontSizeToFitWidth = true
         view.keyboardType = UIKeyboardType.emailAddress
         return view
@@ -209,7 +209,7 @@ class RegistrationViewController: UIViewController {
     var passwordText : UITextField = {
         let view = UITextField()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.placeholder = "Password"
+        view.placeholder = "Құпия сөз"
         view.adjustsFontSizeToFitWidth = true
         view.isSecureTextEntry = true
         return view
@@ -275,7 +275,7 @@ class RegistrationViewController: UIViewController {
     let userTypeStudentButton : UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Student", for: UIControlState.normal)
+        button.setTitle("Студент", for: UIControlState.normal)
         button.addTarget(self, action: #selector(studentTapped), for: .touchUpInside)
         button.backgroundColor = UIColor.blue
         return button
@@ -284,7 +284,7 @@ class RegistrationViewController: UIViewController {
     let userTypeTutorButton : UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Tutor", for: UIControlState.normal)
+        button.setTitle("Мұғалім", for: UIControlState.normal)
         button.addTarget(self, action: #selector(tutorTapped), for: .touchUpInside)
         button.backgroundColor = UIColor.green
         return button
@@ -304,7 +304,7 @@ class RegistrationViewController: UIViewController {
         view.setTitleColor(UIColor.white, for: .normal)
         view.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 1.0, alpha: 0.5)
         
-        view.setTitle("Register", for: UIControlState.normal)
+        view.setTitle("Тіркелу", for: UIControlState.normal)
         view.addTarget(self, action: #selector(handleRegister), for: .touchUpInside)
         return view
     }()
@@ -315,7 +315,7 @@ class RegistrationViewController: UIViewController {
     let backToLoginButton : UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("< Back to Login", for: UIControlState.normal)
+        button.setTitle("< Кіруге оралу", for: UIControlState.normal)
         
         
         button.layer.cornerRadius = 20

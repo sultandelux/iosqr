@@ -16,11 +16,11 @@ import MapKit
 class TutorQRCodeViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, CLLocationManagerDelegate {
     
     
-    let classSizes = ["  Small (10x10 meters)  ", "  Medium (50x50 meters)  ", "  Large (100x100 meters)  "]
-    let classSizesLookup = ["Small", "Medium", "Large"]
+    let classSizes = ["  Кіші (10x10 метр)  ", "  Орташа (50x50 метр)  ", "  Үлкен (100x100 метр)  "]
+    let classSizesLookup = ["Кіші", "Орташа", "Үлкен"]
 
     
-    let validityTimes = ["1 min", "5 mins", "10 mins", "15 mins", "30 mins", "60 mins"]
+    let validityTimes = ["1 мин", "5 мин", "10 мин", "15 мин", "30 мин", "60 мин"]
     
     var CurrentDetails : UIViewController.BasicDetails?
     
@@ -44,7 +44,7 @@ class TutorQRCodeViewController: UIViewController, UIPickerViewDelegate, UIPicke
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
          initiateLocationServices()
-        self.tabBarController?.title = "QR Code"
+        self.tabBarController?.title = "QR-Код"
         self.tabBarController?.navigationItem.rightBarButtonItem = nil
         self.tabBarController?.navigationItem.searchController = nil
     }
@@ -113,7 +113,7 @@ class TutorQRCodeViewController: UIViewController, UIPickerViewDelegate, UIPicke
     // Gives back valid till time string
     func getValidityTimeString() -> String{
         let selectedValidityPeriod = validityTimes[validityPicker.selectedRow(inComponent: 0)]
-        let formattedValidityPeriod = Double (selectedValidityPeriod.getStringBeforeCharacter(lastCharacter: " min"))
+        let formattedValidityPeriod = Double (selectedValidityPeriod.getStringBeforeCharacter(lastCharacter: " мин"))
         
         let minutes: TimeInterval = formattedValidityPeriod! * 60
         let validityTillTime = Date() + minutes
@@ -316,7 +316,7 @@ class TutorQRCodeViewController: UIViewController, UIPickerViewDelegate, UIPicke
     let infoLabel : UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = true
-        label.text = "Please provide the following details to create the QR code for today's attendance."
+        label.text = "Бүгінгі дәріске қатысуды бақылау үшін QR-кодын құруға қажетті ақпараттарды белгілеңіз"
         label.adjustsFontSizeToFitWidth = true
         label.textColor = UIColor.white
         label.font = UIFont.systemFont(ofSize: 16)
@@ -339,7 +339,7 @@ class TutorQRCodeViewController: UIViewController, UIPickerViewDelegate, UIPicke
         let classSizePickerLabel : UILabel = {
             let label = UILabel()
             label.translatesAutoresizingMaskIntoConstraints = false
-            label.text = "Classroom size : "
+            label.text = "Аудитория көлемі : "
             label.textColor = UIColor.white
             label.adjustsFontSizeToFitWidth = true
             label.font = .boldSystemFont(ofSize: 16)
@@ -371,7 +371,7 @@ class TutorQRCodeViewController: UIViewController, UIPickerViewDelegate, UIPicke
         let validityPickerLabel : UILabel = {
             let label = UILabel()
             label.translatesAutoresizingMaskIntoConstraints = false
-            label.text = "Validity Period : "
+            label.text = "Жарамдылығы : "
             label.textColor = UIColor.white
             label.adjustsFontSizeToFitWidth = true
             label.font = .boldSystemFont(ofSize: 16)
@@ -392,7 +392,7 @@ class TutorQRCodeViewController: UIViewController, UIPickerViewDelegate, UIPicke
     var generateButton : UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Generate", for: .normal)
+        button.setTitle("Құру", for: .normal)
         button.addTarget(self, action: #selector(generateTapped), for: .touchUpInside)
         
         button.layer.cornerRadius = 20

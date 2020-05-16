@@ -89,7 +89,7 @@ class StudentQRScannerViewController: UIViewController, AVCaptureMetadataOutputO
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        self.tabBarController?.title = "QR Scanner"
+        self.tabBarController?.title = "QR Сканнер"
         
         if !isError{
             initiateLocationServices()
@@ -158,7 +158,7 @@ class StudentQRScannerViewController: UIViewController, AVCaptureMetadataOutputO
         let hasInvalidChars = invalidChars.isDisjoint(with: rawStringData)
         if !hasInvalidChars {
             // Has invalid characters
-            showAlertAndResumeScanner(Title: "Invalid QR Code", Message: "Please scan a valid QR Code")
+            showAlertAndResumeScanner(Title: "Жарамсыз QR Code", Message: "Жарамды QR Code")
         }
         else{
             checkAndAddAttendance(AttendanceId: rawStringData)
@@ -207,7 +207,7 @@ class StudentQRScannerViewController: UIViewController, AVCaptureMetadataOutputO
                 
             else{
                 // Invalid attendance Id
-                self.showAlertAndResumeScanner(Title: "Invalid QR Code", Message: "Please scan a valid QR Code")
+                self.showAlertAndResumeScanner(Title: "Жарамсыз QR Code", Message: "Жарамды QR кодты еңгізіңіз")
             }
             
         })
@@ -252,7 +252,7 @@ class StudentQRScannerViewController: UIViewController, AVCaptureMetadataOutputO
         
         let distance = myLocation.distance(from: classLocation)
 
-        print("Class Range in meters : \(classRange).\nClass Location lat:\(latitude), long:\(longitude).\n Distance between student and classroom: \(distance)")
+        print("Class Range in метр : \(classRange).\nClass Location lat:\(latitude), long:\(longitude).\n Distance between student and classroom: \(distance)")
         
         // Check if you are in classroom range
         if distance <= classRange{
@@ -269,20 +269,20 @@ class StudentQRScannerViewController: UIViewController, AVCaptureMetadataOutputO
     }
     
     
-    // Returns range in meters + offset based on classroom size
+    // Returns range in метр + offset based on classroom size
     func getClassroomRangeFor(classSize : String) -> Double{
         var rangeInMeters : Double = 50.00
         
         switch (classSize){
-        case "Large":
+        case "Үлкен":
             rangeInMeters = 120.00
             break
             
-        case "Medium":
+        case "Орташа":
             rangeInMeters = 60.00
             break
             
-        case "Small":
+        case "Кіші":
             rangeInMeters = 15.00
             break
             

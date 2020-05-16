@@ -49,7 +49,7 @@ class TutorClassHomeViewController: UIViewController, UITableViewDelegate, UITab
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        self.tabBarController?.title = "Home"
+        self.tabBarController?.title = "Басты бет"
         self.tabBarController?.navigationItem.rightBarButtonItem = nil
         self.tabBarController?.navigationItem.searchController = nil 
     }
@@ -75,9 +75,9 @@ class TutorClassHomeViewController: UIViewController, UITableViewDelegate, UITab
                 remainingLectures = 0
             }
             
-            self.totalLecturesLabel.text = "Total Lectures : \(totalLectures ?? 0)"
-            self.presentLectureLabel.text = "Present Lecture : \(finishedLectures)"
-            self.remainingLectureLabel.text = "Remaining Lectures : \(remainingLectures)"
+            self.totalLecturesLabel.text = "Барлық лекциялар : \(totalLectures ?? 0)"
+            self.presentLectureLabel.text = "Қазіргі Дәріс : \(finishedLectures)"
+            self.remainingLectureLabel.text = "Қалған Дәрістер : \(remainingLectures)"
         })
         
     }
@@ -436,7 +436,7 @@ class TutorClassHomeViewController: UIViewController, UITableViewDelegate, UITab
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .boldSystemFont(ofSize: 25)
         label.textAlignment = .center
-        label.text = "Your Recent Class"
+        label.text = "Соңғы Дәріс Статистикасы"
         label.adjustsFontSizeToFitWidth = true
         return label
     }()
@@ -449,7 +449,7 @@ class TutorClassHomeViewController: UIViewController, UITableViewDelegate, UITab
         label.translatesAutoresizingMaskIntoConstraints = false
 //        label.font = .systemFont(ofSize: 20)
         label.textAlignment = .center
-        label.text = "Total \n 0"
+        label.text = "Жалпы \n 0"
         label.numberOfLines = 2
         label.adjustsFontSizeToFitWidth = true
         return label
@@ -461,7 +461,7 @@ class TutorClassHomeViewController: UIViewController, UITableViewDelegate, UITab
         label.translatesAutoresizingMaskIntoConstraints = false
 //        label.font = .systemFont(ofSize: 20)
         label.textAlignment = .center
-        label.text = "Present \n 0"
+        label.text = "Қатысқан \n 0"
         label.numberOfLines = 2
         label.adjustsFontSizeToFitWidth = true
         return label
@@ -473,7 +473,7 @@ class TutorClassHomeViewController: UIViewController, UITableViewDelegate, UITab
         label.translatesAutoresizingMaskIntoConstraints = false
 //        label.font = .systemFont(ofSize: 20)
         label.textAlignment = .center
-        label.text = "Absent \n 0"
+        label.text = "Қалдырған \n 0"
         label.numberOfLines = 2
         label.adjustsFontSizeToFitWidth = true
         return label
@@ -496,19 +496,19 @@ class TutorClassHomeViewController: UIViewController, UITableViewDelegate, UITab
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .boldSystemFont(ofSize: 25)
         label.textAlignment = .center
-        label.text = "Course Details"
+        label.text = "Курс Статистикасы"
         label.adjustsFontSizeToFitWidth = true
         return label
     }()
     
     
-    // Course Lectures Count label
+    // Course Дәріс саны label
     var totalLecturesLabel : UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
 //        label.font = .systemFont(ofSize: 20)
         label.textAlignment = .center
-        label.text = "Total Lectures : 0"
+        label.text = "Барлық лекциялар : 0"
         label.adjustsFontSizeToFitWidth = true
         return label
     }()
@@ -530,7 +530,7 @@ class TutorClassHomeViewController: UIViewController, UITableViewDelegate, UITab
         label.translatesAutoresizingMaskIntoConstraints = false
 //        label.font = .systemFont(ofSize: 20)
         label.textAlignment = .center
-        label.text = "Remaining Lectures : 0"
+        label.text = "Қалған Дәрістер : 0"
         label.adjustsFontSizeToFitWidth = true
         return label
     }()

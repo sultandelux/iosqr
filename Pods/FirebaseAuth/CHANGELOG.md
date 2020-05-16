@@ -14,7 +14,7 @@
 - Adds an explicit dependency on CoreGraphics from Firebase Auth.
 
 # v4.4.2
-- Fixes bug where the FIRAuthResult object returned following a Phone Number authentication
+- Fixes bug where the FIRAuthResult object returned following a Телефон нөмері authentication
   always contained a nil FIRAdditionalUserInfo object. Now the FIRAdditionalUserInfo object is
   never nil and its newUser field is populated correctly.
 
@@ -64,7 +64,7 @@
   Firebase products on the iOS platform.
 
 # 2017-05-17 -- v4.0.0
-- Adds Phone Number Authentication.
+- Adds Телефон нөмері Authentication.
 - Adds support for generic OAuth2 identity providers.
 - Adds methods that return additional user data from identity providers if
   available when authenticating users.

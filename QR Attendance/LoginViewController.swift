@@ -313,7 +313,7 @@ class LoginViewController: UIViewController {
     var usernameText : UITextField = {
         let view = UITextField()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.placeholder = "Username"
+        view.placeholder = "Аты"
         view.adjustsFontSizeToFitWidth = true
         view.keyboardType = UIKeyboardType.emailAddress
 
@@ -330,7 +330,7 @@ class LoginViewController: UIViewController {
     var passwordText : UITextField = {
         let view = UITextField()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.placeholder = "Password"
+        view.placeholder = "Құпия сөз"
         view.adjustsFontSizeToFitWidth = true
         view.isSecureTextEntry = true
         return view
@@ -375,7 +375,7 @@ class LoginViewController: UIViewController {
     let userTypeStudentButton : UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Student", for: UIControlState.normal)
+        button.setTitle("Студент", for: UIControlState.normal)
         button.addTarget(self, action: #selector(studentTapped), for: .touchUpInside)
         button.backgroundColor = UIColor.blue
         return button
@@ -384,7 +384,7 @@ class LoginViewController: UIViewController {
     let userTypeTutorButton : UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Tutor", for: UIControlState.normal)
+        button.setTitle("Мұғалім", for: UIControlState.normal)
         button.addTarget(self, action: #selector(tutorTapped), for: .touchUpInside)
         button.backgroundColor = UIColor.green
         return button
@@ -397,7 +397,7 @@ class LoginViewController: UIViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 5
         view.layer.masksToBounds = true
-        view.setTitle("Login", for: UIControlState.normal)
+        view.setTitle("Кіру", for: UIControlState.normal)
         view.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
         
         
@@ -417,7 +417,7 @@ class LoginViewController: UIViewController {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.textAlignment = .center
-        view.text = "New user? then create your new account"
+        view.text = "Жаңа қолданушысыз ба? онда өз аккаунтыңызды құрыңыз"
         view.numberOfLines = 0
         view.textColor = UIColor.white
         return view
@@ -427,7 +427,7 @@ class LoginViewController: UIViewController {
     let registerButton : UIButton = {
         let view = UIButton()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.setTitle("Register", for: .normal)
+        view.setTitle("Тіркелу", for: .normal)
         view.addTarget(self, action: #selector(handleRegister), for: .touchUpInside)
         view.setTitleColor(UIColor.green, for: .normal)
         return view

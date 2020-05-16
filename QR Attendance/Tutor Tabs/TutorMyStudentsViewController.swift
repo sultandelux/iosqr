@@ -50,7 +50,7 @@ class TutorMyStudentsViewController: UITableViewController, UISearchResultsUpdat
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        self.tabBarController?.title = "My Students"
+        self.tabBarController?.title = "Менің Студенттерім"
         setupSearchBar()
         
         let addClassButton : UIBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "add_student"), style: .plain, target: self, action: #selector(handleAddStudent))
@@ -77,15 +77,15 @@ class TutorMyStudentsViewController: UITableViewController, UISearchResultsUpdat
 
     @objc func handleAddStudent(){
         // Create the alert controller.
-        let alert = UIAlertController(title: "Add New Student", message: "Please provide a valid student code.", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Жаңа курсты қосу", message: "Жарамды студент кодын еңгізіңіз.", preferredStyle: .alert)
         
         // Add the text field. You can configure it however you need.
         alert.addTextField(configurationHandler: { (textField) -> Void in
-            textField.placeholder = "Student Code"
+            textField.placeholder = "Студент коды"
         })
         
         // Grab the value from the text field when the user clicks OK.
-        alert.addAction(UIAlertAction(title: "Add", style: .default, handler: { [weak alert] (action) -> Void in
+        alert.addAction(UIAlertAction(title: "Қосу", style: .default, handler: { [weak alert] (action) -> Void in
             let textField = (alert?.textFields![0])! as UITextField
             let givenStudentCode = textField.text
             if !(givenStudentCode?.isEmpty)!{
